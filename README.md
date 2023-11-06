@@ -1,12 +1,13 @@
 # selenium-training
 Selenium Java + TestNG training course
-h2. Requirements
+
+Requirements
 - JDK 17
 
-h2. IDE
+IDE
 - IntelliJ IDEA 2023.2 (Community Edition)
 
-h2. Dependencies
+Dependencies
 - selenium-java 
 - webdrivermanager
 - testng
