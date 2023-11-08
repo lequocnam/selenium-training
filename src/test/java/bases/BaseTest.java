@@ -11,11 +11,10 @@ import org.testng.annotations.*;
 
 public class BaseTest {
 
-    public WebDriver driver;
-
     @BeforeMethod
     @Parameters("browser")
     public void createDriver(@Optional("chrome") String browser) {
+        WebDriver driver;
         switch (browser) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -30,12 +29,12 @@ public class BaseTest {
                 driver = new ChromeDriver();
                 break;
         }
+
+        DriverManager.setDriver(driver);
     }
 
     @AfterMethod
     public void quitDriver() {
-        if (driver != null) {
-            driver.quit();
-        }
+        DriverManager.quitDriver();
     }
 }
