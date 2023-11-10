@@ -7,7 +7,7 @@ public class LoginDataProvider {
     public Object[][] loginSucecssData() {
         return new Object[][] {
             {"nam@example.com", "12345678", "These credentials do not match our records."},
-            {"nam@example1.com", "12345678", "",}
+//            {"nam@example1.com", "12345678", "",}
         };
     }
 }

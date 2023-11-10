@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 
 public class BaseTest {
 
-    @BeforeMethod
+    @BeforeTest
     @Parameters("browser")
     public void createDriver(@Optional("chrome") String browser) {
         WebDriver driver;
@@ -33,7 +33,7 @@ public class BaseTest {
         DriverManager.setDriver(driver);
     }
 
-    @AfterMethod
+    @AfterTest
     public void quitDriver() {
         DriverManager.quitDriver();
     }
